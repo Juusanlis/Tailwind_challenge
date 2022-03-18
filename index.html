@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-night_blue">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- displays site properly based on user's device -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    manrope: ['Manrope', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        soft_white: '#FEFFFF',
+                        purple: '#9966C7',
+                        night_blue: '#0A0C1B',
+                        light_purple: '#1C1938',
+                        p_color: 'white',
+                        img_color: '#64347F',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+</head>
+<body>
+
+    <div class="font-manrope fixed flex h-full inset-0 items-center justify-center w-full overflow-scroll">
+        <div class="grid grid-cols-1 lg:grid-cols-2 m-auto w-2/3 overflow-hidden rounded-xl">
+            <div class="lg:order-none bg-night_blue flex flex-row">
+                <div class="flex flex-col flex-wrap justify-center bg-light_purple p-8 lg:p-20">
+                    <h1 class="font-black leading-snug lg:text-left text-4xl text-center text-soft_white tracking-wide">
+                        Get <span class="text-purple"> insights</span> that help your business grow.
+                    </h1>
+
+                    <p class="text-center lg:text-left leading-relaxed mt-3 text-opacity-60 text-p_color text-x1 tracking-wide">
+                        Discover the benefits of data analytics and make<br> better decisions regarding revenue,
+                        customer<br> experience, and overall efficiency.
+                    </p>
+
+                    <div class="text-center lg:text-left space-y-8 lg:space-y-0 grid grid-cols-1 text-p_color text-opacity-60 mt-16 lg:grid-cols-3 uppercase">
+                        <p class="text-sm flex flex-col tracking-widest"><span class="mb-1 font-bold text-soft_white text-3xl lowercase">
+                            10k+</span> companies
+                        </p>
+                        <p class="text-sm flex flex-col tracking-widest"><span class="mb-1 font-bold text-soft_white text-3xl">
+                            314</span> templates
+                        </p>
+                        <p class="text-sm flex flex-col tracking-widest"><span class="mb-1 font-bold text-soft_white text-3xl">
+                            12m+</span> queries
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+         <div class="order-first lg:order-1 relative">
+            <div class="absolute bg-img_color h-full mix-blend-hard-light w-full"></div>
+                <img class="object-cover h-full w-full" src="./images/image-header-desktop.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
